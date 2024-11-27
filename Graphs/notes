@@ -1,0 +1,56 @@
+-> A graph has following properties
+    -> More than one path is allowed
+    -> can start from any node
+    -> can be a loop
+    -> no of edges are not defined
+    -> looks like network
+    -> all graphs are not trees
+
+-> A graph can either be undirected or directed
+    -> Undirected graphs
+        -> Undirected graphs are always cyclic
+
+    -> Directed graphs
+        -> Directed graphs can either be cyclic or acyclic
+        -> directed acyclic graphs are called as DAG's
+
+-> Degrees
+    -> The number of nodes that go outside or come inside the node are called Degrees
+    -> Total degrees in graph = 2 * Edges(since an edge is connected to two nodes)
+
+-> Directed graph:-
+    -> can have inDegree or outDegree
+    -> inDegree is the number of edges that are coming to the node
+    -> outDegree is the number of edges that are going out of the node
+
+-> Edge weight
+    -> Usually each edge has a weight, if no weight is given we can take/assume the weight as 1
+
+
+-> To store a graph we use
+    -> Adjacency matrix
+        -> First we initialize an array with [n+1][n+1] for one indexed graph
+        -> next we fill ones at the positions where there is edge
+            -> for eg 2->1 is the node we fill 1 at (2,1) of the matrix
+        -> next we fill 0's to all other indexes in the matrix
+        -> This method has a SC:O(N*N) and not efficient for larger graphs
+    -> Adjacency List
+        -> This method is to have an array list and it contains arrayList for all indexes
+        -> The individual list will have the connected nodes for that node in it
+        -> eg:- [[2,3], [3,4]] :- here node 1 is connected to 2&3, node 2 is connected to 3&4
+        -> SC: the space complexity of this approach is O(2E)
+   
+
+-> Graphs can be one indexed or zero indexed
+
+-> Components
+    -> Components are various parts of a single graph
+    -> if the components are not connected any traversal we do we might not reach all nodes
+        -> So we take a visited array to keep a track of all the visited nodes
+        -> Initially when an index is not visited we perform a traversal on that node and this ensures we traverse over the entire connected portions of the graph
+
+
+-> BFS
+    -> In bfs we will have a starting node and we travel level wise for the graph
+    -> A level is defined based on hierarchy and this way well go on traversing the entire graph
+    
