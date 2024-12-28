@@ -53,4 +53,7 @@
 -> BFS
     -> In bfs we will have a starting node and we travel level wise for the graph
     -> A level is defined based on hierarchy and this way well go on traversing the entire graph
-    
+
+-> Topological Sort
+    -> To perform a Topological Sort the graph must be acyclic
+    -> it states that in any DAG if there is an edge between (u -> v) u comes before v in ordering
